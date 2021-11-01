@@ -1,0 +1,2 @@
+[25-Sep-2020 14:08:39 America/La_Paz] PHP Fatal error:  Call to a member function mostrarPrimero() on null in /home3/sistemas/pro-ayuda.com/sistema/seguimiento/individual/index.php on line 109
+[25-Sep-2020 14:09:06 America/La_Paz] PHP Fatal error:  Call to a member function muestraPrimero() on null in /home3/sistemas/pro-ayuda.com/sistema/seguimiento/individual/index.php on line 109

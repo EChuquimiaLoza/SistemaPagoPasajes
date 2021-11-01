@@ -1,0 +1,10 @@
+[03-Jun-2021 11:17:14 America/Chicago] PHP Warning:  include_once(../../class/dominio.php): failed to open stream: No such file or directory in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 3
+[03-Jun-2021 11:17:14 America/Chicago] PHP Warning:  include_once(): Failed opening '../../class/dominio.php' for inclusion (include_path='.:/opt/php56/lib/php') in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 3
+[03-Jun-2021 11:17:14 America/Chicago] PHP Fatal error:  Class 'dominio' not found in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 4
+[03-Jun-2021 12:17:33 America/La_Paz] PHP Fatal error:  Call to a member function mostrarTodo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 134
+[03-Jun-2021 12:18:12 America/La_Paz] PHP Fatal error:  Call to a member function mostrarTodo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 134
+[03-Jun-2021 12:23:33 America/La_Paz] PHP Fatal error:  Call to undefined function çinclude_once() in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 11
+[03-Jun-2021 12:23:51 America/La_Paz] PHP Fatal error:  Call to a member function mostrarUltimo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/index.php on line 19
+[03-Jun-2021 14:51:12 America/Chicago] PHP Warning:  include_once(../../class/transporte.php): failed to open stream: No such file or directory in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/guardar.php on line 4
+[03-Jun-2021 14:51:12 America/Chicago] PHP Warning:  include_once(): Failed opening '../../class/transporte.php' for inclusion (include_path='.:/opt/php56/lib/php') in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/guardar.php on line 4
+[03-Jun-2021 14:51:12 America/Chicago] PHP Fatal error:  Class 'transporte' not found in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/vehiculo/guardar.php on line 5

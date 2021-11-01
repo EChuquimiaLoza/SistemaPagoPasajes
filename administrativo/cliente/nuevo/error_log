@@ -1,0 +1,5 @@
+[17-May-2021 14:52:24 America/La_Paz] PHP Fatal error:  Call to a member function mostrarTodo() on null in /home3/sistemas/pro-ayuda.com/sistema_control/administrativo/estudiante/nuevo/index.php on line 143
+[17-May-2021 16:47:21 America/La_Paz] PHP Warning:  include_once(../../../class/estudiante.php): failed to open stream: No such file or directory in /home3/sistemas/pro-ayuda.com/sistema_control/administrativo/estudiante/nuevo/guardares.php on line 8
+[17-May-2021 16:47:21 America/La_Paz] PHP Warning:  include_once(): Failed opening '../../../class/estudiante.php' for inclusion (include_path='.:/opt/php56/lib/php') in /home3/sistemas/pro-ayuda.com/sistema_control/administrativo/estudiante/nuevo/guardares.php on line 8
+[17-May-2021 16:47:21 America/La_Paz] PHP Fatal error:  Class 'estudiante' not found in /home3/sistemas/pro-ayuda.com/sistema_control/administrativo/estudiante/nuevo/guardares.php on line 9
+[17-May-2021 17:35:46 America/La_Paz] PHP Fatal error:  Call to a member function insertar() on null in /home3/sistemas/pro-ayuda.com/sistema_control/administrativo/estudiante/nuevo/guardares.php on line 85
