@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
     ini_set('display_errors', '1');
     session_start();
+    extract($_GET);
 $ruta="../";
 include_once($ruta."class/tarjeta.php");
 $tarjeta=new tarjeta;
@@ -9,7 +10,7 @@ $_SESSION['codusuario']=1;
 $codRfid=$_REQUEST['lblcode'];//Request para android
 $existe=$tarjeta->mostrarUltimo("codigo='$codRfid'");
 $fecha=date('Y-m-d');
-//http://pro-ayuda.com/parqueo/webservice/?lblcode=3
+//http://pro-ayuda.com/bolognia/webservice/?lblcode=3
 if (count($existe)>0) 
 {
 	switch ($existe['estado']) 

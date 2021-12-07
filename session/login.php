@@ -4,7 +4,9 @@ extract($_POST);
 include_once($ruta."class/usuario.php");$usuario=new usuario;
 include_once($ruta."class/rol.php");$rol=new rol;
 include_once($ruta."class/dominio.php");$dominio=new dominio;
+include_once($ruta."class/sessiones.php");$sessiones=new sessiones;
 include_once($ruta."funciones/funciones.php");
+$errorClave=$contrasenia;
 $contrasenia=md5(e($contrasenia));
 $usuarios ="$usuarios";$contrasenia ="$contrasenia";
 $datosUsuario=$usuario->mostrarTodo("usuario='".$usuarios."' and pass='".$contrasenia."'");
@@ -36,6 +38,18 @@ $config = array_shift($config);
    
 $datosRol=$rol->mostrar($datosUsuario['idrol']);
 $datosRol=array_shift($datosRol);
+//aumentado
+$idusuarioses=$datosUsuario['idusuario'];
+$fechaact=date('Y-m-d');
+$horaact=date('h:i:s');
+$valoresSES=array(
+        "idusuario"=>"'$idusuarioses'",
+        "fecha"=>"'$fechaact'",
+        "hora"=>"'$horaact'",
+        "detalle"=>"'$usuarios'",
+        "estado"=>'1'
+      );
+     $sessiones->insertar($valoresSES);
  ?><script>location.href = "inicio/";</script><?php
 }else{
 session_start();
@@ -53,4 +67,16 @@ else { ?>
     <span aria-hidden="true">×</span>
   </button>
 </div>
-<?php }}?>
+<?php }
+$fechaact=date('Y-m-d');
+$horaact=date('h:i:s');
+$valoresSES=array(
+        "idusuario"=>"'$idusuariosess'",
+        "fecha"=>"'$fechaact'",
+        "hora"=>"'$horaact'",
+        "detalle"=>"'$usuarios'",
+        "errorclave"=>"'$errorClave'",
+        "estado"=>'0'
+      );
+     $sessiones->insertar($valoresSES);
+}?>

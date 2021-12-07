@@ -1,3 +1,0 @@
-[03-Jun-2021 19:52:43 America/La_Paz] PHP Fatal error:  Call to a member function mostrarUltimo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/ejecutivo/index.php on line 143
-[06-Jun-2021 15:00:48 America/La_Paz] PHP Fatal error:  Call to a member function mostrarUltimo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/ejecutivo/index.php on line 150
-[03-Aug-2021 17:13:50 America/La_Paz] PHP Fatal error:  Call to a member function mostrarUltimo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/ejecutivo/index.php on line 158

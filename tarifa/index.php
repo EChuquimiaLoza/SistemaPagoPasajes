@@ -77,7 +77,7 @@
                        $contar++;
                     ?>
                     <tr style="<?php echo $estilo ?>">
-                      <td><?php echo $contar ?></td>
+                      <td><?php echo $f['idtarifa'] ?></td>
                       <td><?php echo $f['tramo'] ?></td>
                       <td><?php echo number_format($f['precio'], 2, '.', '') ?></td>
                       <td><?php echo $f['descripcion'] ?></td>

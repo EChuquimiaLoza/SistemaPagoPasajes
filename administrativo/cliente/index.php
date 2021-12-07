@@ -208,42 +208,7 @@
       });
     //0=fecha actual dia
     //1=fecha cambiado
-    function actualizarfechadia(tipocambio)
-    {
-       var estadofechacontrol=$("input[name='estadofechacontrol']:checked").val(); 
-       var fechadia=$("#idfechadia").val(); 
-       var idcredito=$("#idcredito").val(); 
-       if (estadofechacontrol==0) 
-       {
-        var textof='FECHA ACTUAL';
-       }else{
-        var textof='FECHA MODIFICADO';
-       }  
-        swal({
-        title: "Cambio de fecha realizado "+fechadia,
-        text: "Cambio de estado a "+textof,
-        type: "warning",
-        //showCancelButton: true,
-        confirmButtonColor: "#28e29e",
-        confirmButtonText: "ok",
-        closeOnConfirm: false
-      }, function () {      
-        $.ajax({
-          url: "cambiofechadia.php",
-          type: "POST",
-          data: "idcredito="+idcredito+"&idfechadia="+fechadia+"&idestadofechacontrol="+estadofechacontrol,
-          success: function(resp){
-            console.log(resp);
-            $("#idresultado").html(resp);
-          }   
-        });
-      });
-    }
-    function cargarfecha(idcred,fechacontrol)
-    {
-      $("#idcredito").val(idcred);
-      $("#idfechadia").val(fechacontrol);
-    }
+
     function cambiaestado(id,estado){
       swal({
         title: "Estas Seguro?",

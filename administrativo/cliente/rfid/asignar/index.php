@@ -96,7 +96,7 @@
                    <div class="col s12 m12 l2">&nbsp;</div> 
                     <div class="col s12 m12 l8">
                       <div class="input-field col s12 m12 l10" >
-                          <input id="idcodigorfid" name="idcodigorfid" style="font-size: 40px; text-align: center; color: white; background: #006458;" readonly type="number" value="<?php echo $codigo ?>" class="validate">
+                          <input id="idcodigorfid" name="idcodigorfid" style="font-size: 40px; text-align: center; color: white; background: #006458;" readonly type="text" value="<?php echo $codigo ?>" class="validate">
                           <label for="idcodigorfid">Codigo RFID</label>
                         </div>
                         <div class="input-field col s12 m12 l2" >

@@ -4,6 +4,14 @@
   session_start();
   include_once($ruta."funciones/funciones.php");
   $lblcode=ecUrl(3898);
+  include_once($ruta."class/chofer.php");
+  $chofer=new chofer;
+  include_once($ruta."class/vadmejecutivo.php");
+  $vadmejecutivo=new vadmejecutivo;
+  include_once($ruta."class/transporte.php");
+  $transporte=new transporte;
+  include_once($ruta."class/cliente.php");
+  $cliente=new cliente;
   //echo $lblcode;
 ?>
 <!DOCTYPE html>
@@ -34,9 +42,18 @@
               <div class="row">
                 <div class="col s12 m12 l12">
                   <div class="col s12 m12 l12" style="font-size: 18px; text-align: center; font-weight: bold;">
-                    SISTEMA DE PAGO DE PASAJES
+                     <div class="col s12 m12 l12" style="background: white; text-align: center; color:#006458; font-size: 25px; border-radius: 5px; border: #CBCBCB 1px solid; font-weight: bold;">
+                SISTEMAS DE PAGO DE PASAJE
+              </div>
                      </div>
-                  <div class="col s12 m12 l4">
+                     <?php 
+                     $contarus=0;
+                     foreach($vadmejecutivo->mostrarTodo("idtipo!=166 and idtipo!=142") as $f)
+                     {
+                          $contarus++;
+                     }
+                      ?>
+                  <div class="col s12 m12 l3">
                                 <ul id="projects-collection" class="collection">
                                     <li class="collection-item avatar">
                                          <div class="col s5">
@@ -44,26 +61,39 @@
                                         <span class="collection-header">Usuarios</span>
                                         </div>
                                         <div class="col s7">
-                                             <span class="task-cat green" style="font-size: 15px;">3</span>
+                                             <span class="task-cat green" style="font-size: 15px;"><?php echo $contarus ?></span>
                                         </div>
                                     </li>
                                 </ul>
                 </div>
-                 <div class="col s12 m12 l4">
+                 <?php 
+                     $contarchof=0;
+                     foreach($chofer->mostrarTodo("estado=1") as $f)
+                     {
+                          $contarchof++;
+                     }
+                      ?>
+                 <div class="col s12 m12 l3">
                                 <ul id="projects-collection" class="collection">
-                                    
                                     <li class="collection-item avatar">
                                          <div class="col s5">
                                         <i class="mdi-action-assignment-ind circle light-green darken-4"></i>
                                         <span class="collection-header">Choferes</span>
                                         </div>
                                         <div class="col s7">
-                                             <span class="task-cat green">2</span>
+                                             <span class="task-cat green"><?php echo $contarchof ?></span>
                                         </div>
                                     </li>
                                 </ul>
                 </div>
-                 <div class="col s12 m12 l4">
+                 <?php 
+                     $contartra=0;
+                     foreach($transporte->mostrarTodo("estado=1") as $f)
+                     {
+                          $contartra++;
+                     }
+                      ?>
+                 <div class="col s12 m12 l3">
                                 <ul id="projects-collection" class="collection">                                    
                                     <li class="collection-item avatar">
                                          <div class="col s5">
@@ -71,7 +101,27 @@
                                         <span class="collection-header">TRUFI</span>
                                         </div>
                                         <div class="col s7">
-                                             <span class="task-cat green">0</span>
+                                             <span class="task-cat green"><?php echo $contartra ?></span>
+                                        </div>
+                                    </li> 
+                                </ul>
+                </div>
+                <?php 
+                     $contarcli=0;
+                     foreach($cliente->mostrarTodo("estado=1") as $f)
+                     {
+                          $contarcli++;
+                     }
+                      ?>
+                 <div class="col s12 m12 l3">
+                                <ul id="projects-collection" class="collection">                                    
+                                    <li class="collection-item avatar">
+                                         <div class="col s5">
+                                        <i class="mdi-maps-directions-car circle light-green darken-4"></i>
+                                        <span class="collection-header">CLIENTES</span>
+                                        </div>
+                                        <div class="col s7">
+                                             <span class="task-cat green"><?php echo $contarcli ?></span>
                                         </div>
                                     </li> 
                                 </ul>

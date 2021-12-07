@@ -1,2 +1,0 @@
-[02-Aug-2021 14:14:59 America/La_Paz] PHP Fatal error:  Call to a member function mostrarTodo() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/rfid/asignar/index.php on line 77
-[02-Aug-2021 16:34:32 America/La_Paz] PHP Fatal error:  Call to a member function actualizar() on null in /home3/sistemas/pro-ayuda.com/parqueo/administrativo/docente/rfid/asignar/guardar.php on line 15
